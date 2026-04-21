@@ -1,21 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-    <title>Bricolatt - réparation de perceuses</title>
-    <meta charset="UTF-8">
-    <style>
-        body { font-family: Arial; text-align: center; padding: 50px; background: #f5f5f5; }
-        h1 { color: #e67e22; }
-        .box { background: white; padding: 30px; border-radius: 15px; max-width: 600px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        button { background: #e67e22; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
-    </style>
-</head>
-<body>
-    <div class="box">
-        <h1>🔧 Bricolatt</h1>
-        <p>Réparation professionnelle de perceuses et plus encore.</p>
-        <p>📍 Rabat, Maroc</p>
-        <button onclick="alert('Contactez-nous : bricolatt@example.com')">Contact</button>
-    </div>
-</body>
-</html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bricolatt | إصلاح الدريلات والبطاريات الليثيوم</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0d0f12; --surface: #161a20; --card: #1e242d;
+      --accent: #f59e0b; --accent2: #3b82f6; --text: #e8eaf0;
+      --muted: #8892a0; --border: #2a3040;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Tajawal', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+    header { background: var(--surface); border-bottom: 2px solid var(--accent); padding: 0 20px; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 900px; margin: auto; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+    .logo { font-family: 'Cairo', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .logo span { color: var(--text); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; margin-right: 20px; }
+    nav a:hover { color: var(--accent); }
+    .hero { background: linear-gradient(135deg, #0d0f12 0%, #161a20 50%, #1a1f2a 100%); padding: 70px 20px 60px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%); top: -100px; left: 50%; transform: translateX(-50%); pointer-events: none; }
+    .hero-icon { font-size: 3.5rem; margin-bottom: 16px; animation: float 3s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .hero h1 { font-family: 'Cairo', sans-serif; font-weight: 900; font-size: clamp(2rem, 6vw, 3rem); color: var(--accent); margin-bottom: 12px; }
+    .hero p { color: var(--muted); font-size: 1.05rem; max-width: 480px; margin: 0 auto 28px; }
+    .hero-tags { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .tag { background: var(--card); border: 1px solid var(--border); color: var(--accent); padding: 5px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; }
+    .section { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+    .section-title { font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--text); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .video-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.3s, border-color 0.3s; cursor: pointer; }
+    .video-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .video-thumb { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, #1e2a3a, #2a1e0a); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; position: relative; }
+    .play-btn { position: absolute; width: 56px; height: 56px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 0 30px rgba(245,158,11,0.4); transition: transform 0.2s; }
+    .video-card:hover .play-btn { transform: scale(1.1); }
+    .video-info { padding: 18px 20px; }
+    .video-info h3 { font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 6px; color: var(--text); }
+    .video-meta { font-size: 0.8rem; color: var(--muted); display: flex; gap: 12px; }
+    .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+    .article-list { display: flex; flex-direction: column; gap: 14px; }
+    .article-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; display: flex; align-items: flex-start; gap: 16px; transition: border-color 0.2s, transform 0.2s; cursor: pointer; text-decoration: none; color: inherit; }
+    .article-card:hover { border-color: var(--accent2); transform: translateX(-4px); }
+    .article-icon { font-size: 1.8rem; min-width: 42px; text-align: center; margin-top: 2px; }
+    .article-card h3 { font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 0.98rem; margin-bottom: 4px; color: var(--text); }
+    .article-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .article-date { font-size: 0.75rem; color: var(--accent2); margin-top: 6px; font-weight: 500; }
+    .about-strip { background: var(--card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 20px; text-align: center; margin: 50px 0; }
+    .about-strip h2 { font-family: 'Cairo', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--accent); margin-bottom: 10px; }
+    .about-strip p { color: var(--muted); max-width: 500px; margin: 0 auto; font-size: 0.95rem; }
+    footer { background: var(--surface); border-top: 1px solid var(--border); text-ali
