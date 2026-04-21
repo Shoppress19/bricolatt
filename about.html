@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>من نحن | Bricolatt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root { --bg: #0d0f12; --surface: #161a20; --card: #1e242d; --accent: #f59e0b; --accent2: #3b82f6; --text: #e8eaf0; --muted: #8892a0; --border: #2a3040; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Tajawal', sans-serif; line-height: 1.8; }
+    header { background: var(--surface); border-bottom: 2px solid var(--accent); padding: 0 20px; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 900px; margin: auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-family: 'Cairo', sans-serif; font-weight: 900; font-size: 1.4rem; color: var(--accent); text-decoration: none; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; margin-right: 20px; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--accent); }
+    .page-hero { background: linear-gradient(135deg, #0d0f12, #161a20); padding: 60px 20px 40px; text-align: center; border-bottom: 1px solid var(--border); }
+    .page-hero .icon { font-size: 3rem; margin-bottom: 14px; }
+    .page-hero h1 { font-family: 'Cairo', sans-serif; font-weight: 900; font-size: 2rem; color: var(--accent); margin-bottom: 8px; }
+    .page-hero p { color: var(--muted); font-size: 1rem; }
+    .content { max-width: 760px; margin: 50px auto; padding: 0 20px 60px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px 24px; margin-bottom: 20px; transition: border-color 0.2s; }
+    .card:hover { border-color: var(--accent); }
+    .card h2 { font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 1.15rem; color: var(--accent); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 10px; }
+    .card p:last-child { margin-bottom: 0; }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-top: 10px; }
+    .value-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 16px; text-align: center; }
+    .value-item .v-icon { font-size: 2rem; margin-bottom: 8px; }
+    .value-item h3 { font-family: 'Cairo', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .value-item p { font-size: 0.8rem; color: var(--muted); }
+    footer { background: var(--surface); border-top: 1px solid var(--border); text-align: center; padding: 28px 20px; color: var(--muted); font-size: 0.82rem; }
+    footer strong { color: var(--accent); }
+    footer a { color: var(--muted); text-decoration: none; margin: 0 8px; }
+    footer a:hover { color: var(--accent); }
+    @media (max-width: 600px) { nav { display: none; } .values-grid { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">🔧 Bricolatt</a>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html" class="active">من نحن</a>
+      <a href="privacy.html">الخصوصية</a>
+      <a href="disclaimer.html">إخلاء مسؤولية</a>
+    </nav>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="icon">👋</div>
+  <h1>من نحن</h1>
+  <p>تعرّف على Bricolatt ورسالتنا في نشر ثقافة الإصلاح</p>
+</div>
+<div class="content">
+  <div class="card">
+    <h2>🔧 ما هو Bricolatt؟</h2>
+    <p>Bricolatt هو موقع تعليمي متخصص في إصلاح الأدوات الكهربائية، وتحديداً الدريلات وبطاريات الليثيوم.</p>
+    <p>هدفنا بسيط: نساعدك تصلح بدل ما تشتري — توفير المال، وحماية البيئة، ونشر مهارات عملية مف
